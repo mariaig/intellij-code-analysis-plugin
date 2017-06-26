@@ -1,0 +1,66 @@
+<idea-plugin>
+  <id>thesis.plugin</id>
+  <name>Java code analysis plugin</name>
+  <version>1.0</version>
+  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">-</vendor>
+
+  <description><![CDATA[
+     <br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      <br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <inspectionToolProvider implementation="thesis.plugin.inspection.MyOwnInspectionProvider"/>
+    <inspectionToolProvider implementation="thesis.plugin.inspection.ParallelStreamInspectionProvider"/>
+    <inspectionToolProvider implementation="thesis.plugin.inspection.ParallelStreamVarTypesInspectionProvider"/>
+    <inspectionToolProvider implementation="thesis.plugin.inspection.SortedThenFilterInspectionProvider"/>
+    <inspectionToolProvider implementation="thesis.plugin.inspection.SortedThenLimitInspectionProvider"/>
+    <inspectionToolProvider implementation="thesis.plugin.inspection.StaticNonFinalClassVariablesInspectionProvider"/>
+    <inspectionToolProvider implementation="thesis.plugin.inspection.UtilityClassesInspectionsProvider"/>
+    <inspectionToolProvider implementation="thesis.plugin.inspection.RedundantChainInspectionProvider"/>
+    <inspectionToolProvider implementation="thesis.plugin.inspection.ConcurrentModificationInspectionProvider"/>
+    <inspectionToolProvider implementation="thesis.plugin.inspection.SortedThenDistinctInspectionProvider"/>
+  </extensions>
+
+
+  <actions>
+    <!--&lt;!&ndash; Add your actions here &ndash;&gt;-->
+    <action id="TestAction" class="thesis.plugin.impl.TestAction" text="TestAction" description="TestAction">
+      <add-to-group group-id="AnalyzeMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="alt T"/>
+    </action>
+    <action id="GenerateDependencyTree" class="thesis.plugin.actions.GenerateDependencyTree" text="GenerateDependencyTree"
+            description="GenerateDependencyTree">
+      <!--<add-to-group group-id="ToolsMenu" relative-to-action="GenerateJavadoc" anchor="after"/>-->
+      <!--<add-to-group group-id="AnalyzeMenu" relative-to-action="ShowPackageDeps" anchor="before"/>-->
+      <!--<add-to-group group-id="AnalyzeMenu" relative-to-action="ShowPackageDeps" anchor="before"/>-->
+        <add-to-group group-id="AnalyzeActions" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="alt D"/>
+    </action>
+  </actions>
+
+  <!--<actions>-->
+    <!--<group id="MyPlugin.SampleMenu" text="_Sample Menu" description="Sample menu">-->
+      <!--<add-to-group group-id="MainMenu" anchor="last"  />-->
+        <!--<action id="TestAction" class="thesis.plugin.impl.TestAction" text="TestAction" description="TestAction"/>-->
+    <!--</group>-->
+  <!--</actions>-->
+
+</idea-plugin>
