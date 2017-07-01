@@ -88,14 +88,51 @@ public class ConcurrentModificationInspection extends BaseJavaLocalInspectionToo
                 // I need to get the full expression, and see if the first param is actually a container
                 // (It's used in the full expr)
 
-//                if (shouldBeRegistered(expression, "\\.")) {
-//                    System.out.println("Should be registered!!!");
-//                    holder.registerProblem(expression,
-//                            "No function should change the original container while iterating on it!", ProblemHighlightType.ERROR);
-//                }
-                //TODO
+                PsiMethodCallExpression methodCallExpression = getStreamExpression(expression.getParent(), expression);
+                String[] initialList = methodCallExpression.getText().split("\\.:");
+
+                if (initialList.length > 0) {
+                    String collectionName = initialList[0];
+                    if (shouldBeRegistered(expression, collectionName)) {
+                        holder.registerProblem(expression,
+                                "No function should change the original container while iterating on it!", ProblemHighlightType.ERROR);
+                    }
+                }
             }
         };
+    }
+
+
+    private PsiMethodCallExpression getStreamExpression(PsiElement parent, PsiElement child) {
+        if (parent instanceof PsiClass) {
+            return null;
+        }
+        if (child instanceof PsiMethodCallExpression &&
+                ((parent instanceof PsiVariable) ||
+                        // case 2 List<T> a; a=v.stream..
+                        (parent instanceof PsiAssignmentExpression) ||
+                        // case 3 v.stream..
+                        (parent instanceof PsiExpressionStatement))) {
+            return (PsiMethodCallExpression) child;
+        }
+
+        return getStreamExpression(parent.getParent(), parent);
+    }
+
+
+    boolean shouldBeRegistered(PsiMethodReferenceExpression expression, String varName) {
+        String[] initialList = expression.getText().split("::");
+        String method = initialList[1];
+
+        if (!SET_LIST_METHODS.contains(method) && !MAP_METHODS.contains(method)) {
+            return false;
+        }
+
+        if (variableShouldNotBeChecked(expression, varName)) {
+            return false;
+        }
+
+        return true;
     }
 
 
@@ -116,7 +153,6 @@ public class ConcurrentModificationInspection extends BaseJavaLocalInspectionToo
         nodes.remove(variable);
         String method = nodes.get(0);
 
-
         if (!SET_LIST_METHODS.contains(method) && !MAP_METHODS.contains(method)) {
             return false;
         }
@@ -124,8 +160,6 @@ public class ConcurrentModificationInspection extends BaseJavaLocalInspectionToo
         // if we are here it means that we have an expresion of interest, maybe one that tries to change the original container
         // in order to see if this is happening, we need to go to the upper level and see if we find a for, a foreach or if this is a part of
         // another method expression
-
-        //TODO:
         if (variableShouldNotBeChecked(expression, variable)) {
             return false;
         }
@@ -147,9 +181,9 @@ public class ConcurrentModificationInspection extends BaseJavaLocalInspectionToo
     }
 
 
-    private boolean variableShouldNotBeChecked(PsiMethodCallExpression expression, String varName) {
-        //TODO: verificat ca tipul var nu e thread safe
-        // daca e thread safe, atunci return false
+    private boolean variableShouldNotBeChecked(PsiElement expression, String varName) {
+        // get all the variables defined in the current method in order to get the inspected
+        // variable type
         PsiMethod parentMethod = getParentMethod(expression);
         PsiElement[] variables = PsiTreeUtil.collectElements(parentMethod, new PsiElementFilter() {
             public boolean isAccepted(PsiElement e) {
@@ -165,6 +199,9 @@ public class ConcurrentModificationInspection extends BaseJavaLocalInspectionToo
         ).findFirst();
 
         if (variable.isPresent()) {
+            // check for the current variable if its type is within the concurrent collections type
+            // (thread safe collections that support adding/removing elements from them while iterating on
+            // them)
             PsiNewExpression initializer = null;
             PsiVariable psiVariable = (PsiVariable) variable.get();
             if (psiVariable.getInitializer() instanceof PsiNewExpression) {
