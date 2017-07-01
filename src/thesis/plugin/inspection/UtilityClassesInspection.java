@@ -46,11 +46,6 @@ public class UtilityClassesInspection extends BaseJavaLocalInspectionTool {
         return "UtilityClassesInspection";
     }
 
-    @Nullable
-    @Override
-    public String getStaticDescription() {
-        return "UtilityClassesInspection";
-    }
 
     @NotNull
     @Override

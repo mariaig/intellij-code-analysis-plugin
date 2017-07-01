@@ -76,8 +76,7 @@ public class ParallelStreamVarTypesInspection extends BaseJavaLocalInspectionToo
                                     .findAll();
 
                     String description = "Performance issue: " +
-                            "Variable \"" + variable.getName() + "\" type performs badly for parallel streams. " ;//+
-//                            "You might consider changing the type or just use stream() instead";
+                            "Variable \"" + variable.getName() + "\" type performs badly for parallel streams." ;
                     allUsages.forEach(
                             var -> {
                                 PsiMethodCallExpression expressionStatement = getStatementParent(var.getElement());

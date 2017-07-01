@@ -14,7 +14,7 @@ import static thesis.plugin.impl.Constants.MY_OWN_GROUP;
  * Created by Maria on 6/10/2017.
  */
 public class StaticNonFinalClassVariablesInspection extends BaseJavaLocalInspectionTool {
-    private static final String DESC = "This field is available for modification by any class";
+    private static final String DESC = "Public class variables should be 'final'";
 
 
     @Nls
@@ -34,12 +34,6 @@ public class StaticNonFinalClassVariablesInspection extends BaseJavaLocalInspect
     @NotNull
     @Override
     public String getShortName() {
-        return "StaticNonFinalClassVariablesInspection";
-    }
-
-    @Nullable
-    @Override
-    public String getStaticDescription() {
         return "StaticNonFinalClassVariablesInspection";
     }
 

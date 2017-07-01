@@ -40,11 +40,7 @@ public class SortedThenLimitInspection extends BaseJavaLocalInspectionTool {
         return "SortedThenLimitInspection";
     }
 
-    @Nullable
-    @Override
-    public String getStaticDescription() {
-        return "SortedThenLimitInspection";
-    }
+
     @NotNull
     @Override
     public PsiElementVisitor buildVisitor(@NotNull ProblemsHolder holder, boolean isOnTheFly) {

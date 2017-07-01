@@ -41,12 +41,6 @@ public class SkipChain extends AbstractRedundantChainInspection {
         return fix;
     }
 
-    @Nullable
-    @Override
-    public String getStaticDescription() {
-        return "TODO:";
-    }
-
     @Override
     boolean shouldBeRegistered(PsiMethodCallExpression expression) {
 

@@ -4,6 +4,8 @@ import com.intellij.codeInspection.BaseJavaLocalInspectionTool;
 import com.intellij.codeInspection.ProblemHighlightType;
 import com.intellij.codeInspection.ProblemsHolder;
 import com.intellij.psi.*;
+import com.intellij.psi.util.PsiElementFilter;
+import com.intellij.psi.util.PsiTreeUtil;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -11,6 +13,9 @@ import thesis.plugin.impl.ExpressionGraph;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
+import java.util.StringTokenizer;
+import java.util.stream.Stream;
 
 import static thesis.plugin.impl.Constants.MY_OWN_GROUP;
 
@@ -19,10 +24,14 @@ import static thesis.plugin.impl.Constants.MY_OWN_GROUP;
  */
 public class ConcurrentModificationInspection extends BaseJavaLocalInspectionTool {
 
+    private static final String CHECKED_CLASSES = "java.util.Vector;java.util.HashTable";
+    private static final String CONCURRENT_PACKAGE = "java.util.concurrent";
+
+
     private static final List<String> SET_LIST_METHODS =
             Arrays.asList("add", "addAll", "clear", "remove", "removeAll", "replaceAll", "removeIf", "set");
     private static final List<String> MAP_METHODS =
-            Arrays.asList( "clear", "compute", "computeIfAbsent", "computeIfPresent",
+            Arrays.asList("clear", "compute", "computeIfAbsent", "computeIfPresent",
                     "merge", "put", "putAll", "putIfAbsent", "remove");
 
 
@@ -103,8 +112,8 @@ public class ConcurrentModificationInspection extends BaseJavaLocalInspectionToo
 
         // remove the first one, we really don't care about it for now, but we really want to see if the second one
         // it's in a list
-        String objName = initialList[0];
-        nodes.remove(objName);
+        String variable = initialList[0];
+        nodes.remove(variable);
         String method = nodes.get(0);
 
 
@@ -116,29 +125,96 @@ public class ConcurrentModificationInspection extends BaseJavaLocalInspectionToo
         // in order to see if this is happening, we need to go to the upper level and see if we find a for, a foreach or if this is a part of
         // another method expression
 
+        //TODO:
+        if (variableShouldNotBeChecked(expression, variable)) {
+            return false;
+        }
+
+        //((PsiLocalVariable) variables[1]).getType() - vazut la var types inspection cum se ia tipul exact al variabilei.
         boolean finalResult = false;
 
-        StringBuilder builder = new StringBuilder(objName).append(".").append("size()");
-        if( checkForStatement(expression.getParent(), builder.toString())) {
+        StringBuilder builder = new StringBuilder(variable).append(".").append("size()");
+        if (checkForStatement(expression.getParent(), builder.toString())) {
             return true;
         }
 
-        if( checkForEachStatement(expression.getParent(),  objName)) {
-                return true;
+        if (checkForEachStatement(expression.getParent(), variable)) {
+            return true;
         }
 
         // check for java 8 stream.
-        return checkInStream(expression.getParent(), objName);
+        return checkInStream(expression.getParent(), variable);
+    }
+
+
+    private boolean variableShouldNotBeChecked(PsiMethodCallExpression expression, String varName) {
+        //TODO: verificat ca tipul var nu e thread safe
+        // daca e thread safe, atunci return false
+        PsiMethod parentMethod = getParentMethod(expression);
+        PsiElement[] variables = PsiTreeUtil.collectElements(parentMethod, new PsiElementFilter() {
+            public boolean isAccepted(PsiElement e) {
+                if (e instanceof PsiVariable) {
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        Optional<PsiElement> variable = Stream.of(variables).filter(
+                var -> varName.equals(((PsiVariable) var).getName())
+        ).findFirst();
+
+        if (variable.isPresent()) {
+            PsiNewExpression initializer = null;
+            PsiVariable psiVariable = (PsiVariable) variable.get();
+            if (psiVariable.getInitializer() instanceof PsiNewExpression) {
+                initializer = (PsiNewExpression) psiVariable.getInitializer();
+            }
+
+            return shouldNotBeChecked(psiVariable.getType()) || (initializer != null && shouldNotBeChecked(initializer.getType()));
+        }
+
+        return false;
+    }
+
+
+    private boolean shouldNotBeChecked(PsiType type) {
+        if (!(type instanceof PsiClassType)) {
+            return false;
+        }
+        if (type.getCanonicalText().startsWith(CONCURRENT_PACKAGE)) {
+            return true;
+        }
+
+        StringTokenizer tokenizer = new StringTokenizer(CHECKED_CLASSES, ";");
+        while (tokenizer.hasMoreTokens()) {
+            String className = tokenizer.nextToken();
+            if (type.getCanonicalText().contains(className)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private static PsiMethod getParentMethod(PsiElement element) {
+
+
+        if (element instanceof PsiMethod) {
+            return (PsiMethod) element;
+        }
+
+        return getParentMethod(element.getParent());
     }
 
 
     private boolean checkForStatement(PsiElement parent, String expression) {
-        if(parent instanceof PsiClass) {
+        if (parent instanceof PsiClass) {
             //stop
             return false;
         }
 
-        if(parent instanceof PsiForStatement) {
+        if (parent instanceof PsiForStatement) {
             // now I should check if one of the conditions is to iterate over the list
             PsiForStatement forStatement = (PsiForStatement) parent;
             return forStatement.getCondition().getText().contains(expression);
@@ -148,28 +224,28 @@ public class ConcurrentModificationInspection extends BaseJavaLocalInspectionToo
     }
 
     private boolean checkForEachStatement(PsiElement parent, String expression) {
-        if(parent instanceof PsiClass) {
+        if (parent instanceof PsiClass) {
             //stop
             return false;
         }
 
-        if(parent instanceof PsiForeachStatement) {
+        if (parent instanceof PsiForeachStatement) {
             // now I should check if one of the conditions is to iterate over the list
             PsiForeachStatement foreachStatement = (PsiForeachStatement) parent;
             String iteratedValue = foreachStatement.getIteratedValue().getText();
             return iteratedValue.contains(expression);
         }
-         return  checkForEachStatement(parent.getParent(), expression);
+        return checkForEachStatement(parent.getParent(), expression);
     }
 
     private boolean checkInStream(PsiElement child, String objectThatIsModified) {
         PsiElement parent = child.getParent();
-        if(parent instanceof PsiClass) {
+        if (parent instanceof PsiClass) {
             //stop
             return false;
         }
 
-        if(child instanceof PsiMethodCallExpression &&
+        if (child instanceof PsiMethodCallExpression &&
                 ((parent instanceof PsiVariable) ||
                         // case 2 List<T> a; a=v.stream..
                         (parent instanceof PsiAssignmentExpression) ||
@@ -184,7 +260,6 @@ public class ConcurrentModificationInspection extends BaseJavaLocalInspectionToo
 
         return checkInStream(parent, objectThatIsModified);
     }
-
 
 
     @Override

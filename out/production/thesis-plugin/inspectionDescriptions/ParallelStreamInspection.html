@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-
+<html>
+<body>
+Detects the usage of a synchronized method within a parallel stream.
+Parallel streams achieve parallelism through threads using the existing fork/join pool so whenever we are using it, we need to make sure not to run any blocking operations. However, methods that have the synchronized modifier are blocking - threads can access these method one at a time.
 </body>
 </html>

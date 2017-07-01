@@ -29,7 +29,7 @@ public class LimitChain extends AbstractRedundantChainInspection {
     @NotNull
     @Override
     public String getShortName() {
-        return "LimitChainInspection";
+        return "LimitChain";
     }
 
 
@@ -42,13 +42,6 @@ public class LimitChain extends AbstractRedundantChainInspection {
     LocalQuickFix getFix() {
         return fix;
     }
-
-    @Nullable
-    @Override
-    public String getStaticDescription() {
-        return "TODO:";
-    }
-
 
     @Override
     boolean shouldBeRegistered(PsiMethodCallExpression expression) {

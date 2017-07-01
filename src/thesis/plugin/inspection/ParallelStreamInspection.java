@@ -54,12 +54,6 @@ public class ParallelStreamInspection extends BaseJavaLocalInspectionTool {
     }
 
 
-    @Nullable
-    @Override
-    public String getStaticDescription() {
-        return "TODO:";
-    }
-
     @NotNull
     @Override
     public PsiElementVisitor buildVisitor(@NotNull ProblemsHolder holder, boolean isOnTheFly) {
@@ -93,8 +87,6 @@ public class ParallelStreamInspection extends BaseJavaLocalInspectionTool {
 
 
     private Set<ProblemsHolderDescriptor> getClassProblems(PsiClass inspectedClass) {
-        //TODO: remove the singleton and make it receive the current class so we won't cache other classes problems anymore
-//        if(inspectedClass.getText().contains("parallelStream"))
 
         // if the current class contains synchronized methods, just see if these methods are used in a parallel stream
         Set<ProblemsHolderDescriptor> classProblems = Sets.newHashSet();
