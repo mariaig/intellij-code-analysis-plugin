@@ -6,7 +6,18 @@
 
   <description><![CDATA[
      <br>
-      <em>most HTML tags may be used</em>
+What this plugin does is to extend the existing inspections from IntelliJ IDEA and cover the following code inspections:
+<ul>
+<li> Detection of utility classes</li>
+<li> Usage of public static non-final variables</li>
+<li> Concurrent modification of the container</li>
+<li>Redundant limit and skip chains</li>
+<li> Parallel streams used with synchronized methods</li>
+<li> Data structures that perform badly for parallel streams</li>
+<li> Sort then filter/distinct methods chain</li>
+<li> Sort then limit methods chain</li>
+</ul>
+
     ]]></description>
 
   <change-notes><![CDATA[
@@ -48,19 +59,9 @@
     </action>
     <action id="GenerateDependencyTree" class="thesis.plugin.actions.GenerateDependencyTree" text="GenerateDependencyTree"
             description="GenerateDependencyTree">
-      <!--<add-to-group group-id="ToolsMenu" relative-to-action="GenerateJavadoc" anchor="after"/>-->
-      <!--<add-to-group group-id="AnalyzeMenu" relative-to-action="ShowPackageDeps" anchor="before"/>-->
-      <!--<add-to-group group-id="AnalyzeMenu" relative-to-action="ShowPackageDeps" anchor="before"/>-->
         <add-to-group group-id="AnalyzeActions" anchor="first"/>
       <keyboard-shortcut keymap="$default" first-keystroke="alt D"/>
     </action>
   </actions>
-
-  <!--<actions>-->
-    <!--<group id="MyPlugin.SampleMenu" text="_Sample Menu" description="Sample menu">-->
-      <!--<add-to-group group-id="MainMenu" anchor="last"  />-->
-        <!--<action id="TestAction" class="thesis.plugin.impl.TestAction" text="TestAction" description="TestAction"/>-->
-    <!--</group>-->
-  <!--</actions>-->
 
 </idea-plugin>

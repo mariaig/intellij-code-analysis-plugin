@@ -6,32 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c8db08ef-b784-4a26-a5e9-98a4089a3587" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/impl/Constants.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/impl/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/impl/ExpressionGraph.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/impl/ExpressionGraph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/impl/InvertedNodesExpressionGraph.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/impl/InvertedNodesExpressionGraph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/impl/ProblemsHolderDescriptor.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/impl/ProblemsHolderDescriptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/impl/RedundantChainDetails.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/impl/RedundantChainDetails.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/impl/RedundantChainExpressionGraph.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/impl/RedundantChainExpressionGraph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/AbstractRedundantChainInspection.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/AbstractRedundantChainInspection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/ConcurrentModificationInspection.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/ConcurrentModificationInspection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/ConcurrentModificationInspectionProvider.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/ConcurrentModificationInspectionProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/LimitChain.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/LimitChain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/ParallelStreamInspection.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/ParallelStreamInspection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/ParallelStreamInspectionProvider.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/ParallelStreamInspectionProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/ParallelStreamVarTypesInspection.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/ParallelStreamVarTypesInspection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/ParallelStreamVarTypesInspectionProvider.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/ParallelStreamVarTypesInspectionProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/RedundantChainInspectionProvider.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/RedundantChainInspectionProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/SkipChain.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/SkipChain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/SortedThenDistinctInspection.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/SortedThenDistinctInspection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/SortedThenDistinctInspectionProvider.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/SortedThenDistinctInspectionProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/SortedThenFilterInspection.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/SortedThenFilterInspection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/SortedThenFilterInspectionProvider.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/SortedThenFilterInspectionProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/SortedThenLimitInspection.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/SortedThenLimitInspection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/SortedThenLimitInspectionProvider.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/SortedThenLimitInspectionProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/StaticNonFinalClassVariablesInspection.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/StaticNonFinalClassVariablesInspection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/StaticNonFinalClassVariablesInspectionProvider.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/StaticNonFinalClassVariablesInspectionProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/UtilityClassesInspection.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/UtilityClassesInspection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/UtilityClassesInspectionsProvider.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/UtilityClassesInspectionsProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -127,7 +102,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/thesis/plugin/impl/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -137,15 +112,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SortedThenDistinctInspectionProvider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/thesis/plugin/inspection/SortedThenDistinctInspectionProvider.java">
+      <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="18" column="3" lean-forward="false" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-              <folding>
-                <element signature="e#837#838#0" expanded="true" />
-                <element signature="e#908#909#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="781">
+              <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -222,7 +194,6 @@
         <option value="$PROJECT_DIR$/src/thesis/plugin/inspection/SortThenDistrinctInspectionProvider.java" />
         <option value="$PROJECT_DIR$/src/thesis/plugin/inspection/SortThenDistrinctInspection.java" />
         <option value="$PROJECT_DIR$/src/thesis/plugin/inspection/SortThenDistinctInspection.java" />
-        <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
         <option value="$PROJECT_DIR$/resources/inspectionDescriptions/LimitChainInspection.html" />
         <option value="$PROJECT_DIR$/resources/inspectionDescriptions/SortedThenFilterInspection.html" />
         <option value="$PROJECT_DIR$/resources/inspectionDescriptions/ConcurrentModificationInspection.html" />
@@ -262,6 +233,7 @@
         <option value="$PROJECT_DIR$/src/thesis/plugin/inspection/UtilityClassesInspection.java" />
         <option value="$PROJECT_DIR$/src/thesis/plugin/inspection/UtilityClassesInspectionsProvider.java" />
         <option value="$PROJECT_DIR$/src/thesis/plugin/impl/Constants.java" />
+        <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
       </list>
     </option>
   </component>
@@ -398,15 +370,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inspection" />
+              <option name="myItemId" value="META-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -420,15 +388,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -782,7 +742,14 @@
       <option name="project" value="LOCAL" />
       <updated>1498991211470</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added notice to the header of each class">
+      <created>1498991424923</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1498991424923</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -865,7 +832,8 @@
     <MESSAGE value="add inspections descriptions" />
     <MESSAGE value="some cleanup &amp; refactoring &amp; apache 2.0 licence" />
     <MESSAGE value="cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
+    <MESSAGE value="added notice to the header of each class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added notice to the header of each class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1100,14 +1068,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="55" lean-forward="false" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1467,6 +1427,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="16" column="3" lean-forward="false" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="781">
+          <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding />
         </state>
       </provider>
