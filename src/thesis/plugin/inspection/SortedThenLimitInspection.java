@@ -1,14 +1,12 @@
 package thesis.plugin.inspection;
 
 import com.intellij.codeInspection.*;
-import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.psi.*;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import thesis.plugin.impl.ExpressionGraph;
 
-import static thesis.plugin.impl.Constants.MY_OWN_GROUP;
+import static thesis.plugin.impl.Constants.PLUGIN_GROUP;
 
 /**
  * Created by Maria on 6/11/2017.
@@ -24,7 +22,7 @@ public class SortedThenLimitInspection extends BaseJavaLocalInspectionTool {
     @NotNull
     @Override
     public String getGroupDisplayName() {
-        return MY_OWN_GROUP;
+        return PLUGIN_GROUP;
     }
 
     @Nls

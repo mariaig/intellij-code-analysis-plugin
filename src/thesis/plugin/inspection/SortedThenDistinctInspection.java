@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 import thesis.plugin.impl.ExpressionGraph;
 import thesis.plugin.impl.InvertedNodesExpressionGraph;
 
-import static thesis.plugin.impl.Constants.MY_OWN_GROUP;
+import static thesis.plugin.impl.Constants.PLUGIN_GROUP;
 
 /**
  * Created by Maria on 6/24/2017.
@@ -24,7 +24,7 @@ public class SortedThenDistinctInspection extends BaseJavaLocalInspectionTool {
     @NotNull
     @Override
     public String getGroupDisplayName() {
-        return MY_OWN_GROUP;
+        return PLUGIN_GROUP;
     }
 
     @Nls

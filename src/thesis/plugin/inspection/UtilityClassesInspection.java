@@ -1,22 +1,16 @@
 package thesis.plugin.inspection;
 
 import com.intellij.codeInsight.generation.GenerateConstructorHandler;
-import com.intellij.codeInsight.generation.GenerateMembersUtil;
-import com.intellij.codeInsight.generation.GenerationInfo;
 import com.intellij.codeInspection.*;
-import com.intellij.openapi.application.WriteAction;
-import com.intellij.openapi.editor.Editor;
-import com.intellij.openapi.fileEditor.FileEditorManager;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.*;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static thesis.plugin.impl.Constants.MY_OWN_GROUP;
+import static thesis.plugin.impl.Constants.PLUGIN_GROUP;
 
 /**
  * Created by Maria on 6/10/2017.
@@ -30,7 +24,7 @@ public class UtilityClassesInspection extends BaseJavaLocalInspectionTool {
     @NotNull
     @Override
     public String getGroupDisplayName() {
-        return MY_OWN_GROUP;
+        return PLUGIN_GROUP;
     }
 
     @Nls

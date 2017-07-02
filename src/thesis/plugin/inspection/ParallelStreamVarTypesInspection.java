@@ -10,7 +10,6 @@ import com.intellij.util.IncorrectOperationException;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -18,7 +17,7 @@ import java.awt.*;
 import java.util.Collection;
 import java.util.StringTokenizer;
 
-import static thesis.plugin.impl.Constants.MY_OWN_GROUP;
+import static thesis.plugin.impl.Constants.PLUGIN_GROUP;
 
 /**
  * Created by Maria on 6/2/2017.
@@ -35,7 +34,7 @@ public class ParallelStreamVarTypesInspection extends BaseJavaLocalInspectionToo
     @NotNull
     @Override
     public String getGroupDisplayName() {
-        return MY_OWN_GROUP;
+        return PLUGIN_GROUP;
     }
 
     @Nls

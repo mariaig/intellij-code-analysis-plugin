@@ -1,7 +1,6 @@
 package thesis.plugin.inspection;
 
 import com.google.caliper.internal.guava.collect.Sets;
-import com.google.common.collect.Maps;
 import com.intellij.codeInsight.completion.AllClassesGetter;
 import com.intellij.codeInsight.completion.PlainPrefixMatcher;
 import com.intellij.codeInspection.*;
@@ -14,13 +13,12 @@ import com.intellij.util.IncorrectOperationException;
 import com.intellij.util.Processor;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import thesis.plugin.impl.ProblemsHolderDescriptor;
 
 import java.util.*;
 
 import static java.util.stream.Collectors.toList;
-import static thesis.plugin.impl.Constants.MY_OWN_GROUP;
+import static thesis.plugin.impl.Constants.PLUGIN_GROUP;
 
 /**
  * Created by Maria on 5/30/2017.
@@ -37,7 +35,7 @@ public class ParallelStreamInspection extends BaseJavaLocalInspectionTool {
     @NotNull
     @Override
     public String getGroupDisplayName() {
-        return MY_OWN_GROUP;
+        return PLUGIN_GROUP;
     }
 
     @Nls

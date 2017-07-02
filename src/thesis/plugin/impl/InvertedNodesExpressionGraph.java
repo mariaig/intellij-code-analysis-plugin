@@ -37,17 +37,17 @@ public class InvertedNodesExpressionGraph extends ExpressionGraph{
             } else if (key.equals(node1) && value.equals(node2)) {
                 node1UUID = edge.getKey();
                 node2UUID = edge.getValue();
-            } else if (key.equals(node2)) {
-                // we can get the child
-                node2ChildUUID = edge.getValue();
             }
 
-            if (!node1UUID.isEmpty() && !node1ParentUUID.isEmpty() && !node2UUID.isEmpty()
-                    && !node2ChildUUID.isEmpty()) {
+            if (!node1UUID.isEmpty() && !node1ParentUUID.isEmpty() && !node2UUID.isEmpty()) {
                 break;
             }
         }
 
+        if(!edges.get(node2UUID).isEmpty()){
+            // we can get the child
+            node2ChildUUID = edges.get(node2UUID);
+        }
         // just repopulate the map with the new order
         edges.put(node1ParentUUID, node2UUID);
         edges.put(node2UUID, node1UUID);

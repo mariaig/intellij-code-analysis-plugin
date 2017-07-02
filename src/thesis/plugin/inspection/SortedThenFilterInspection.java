@@ -6,11 +6,10 @@ import com.intellij.openapi.project.Project;
 import com.intellij.psi.*;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import thesis.plugin.impl.ExpressionGraph;
 import thesis.plugin.impl.InvertedNodesExpressionGraph;
 
-import static thesis.plugin.impl.Constants.MY_OWN_GROUP;
+import static thesis.plugin.impl.Constants.PLUGIN_GROUP;
 
 /**
  * Created by Maria on 6/4/2017.
@@ -27,7 +26,7 @@ public class SortedThenFilterInspection extends BaseJavaLocalInspectionTool {
     @NotNull
     @Override
     public String getGroupDisplayName() {
-        return MY_OWN_GROUP;
+        return PLUGIN_GROUP;
     }
 
     @Nls

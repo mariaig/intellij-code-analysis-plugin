@@ -10,7 +10,7 @@ import thesis.plugin.impl.RedundantChainExpressionGraph;
 
 import java.util.List;
 
-import static thesis.plugin.impl.Constants.MY_OWN_GROUP;
+import static thesis.plugin.impl.Constants.PLUGIN_GROUP;
 
 /**
  * Created by Maria on 6/10/2017.
@@ -29,7 +29,7 @@ public abstract class AbstractRedundantChainInspection extends BaseJavaLocalInsp
     @NotNull
     @Override
     public String getGroupDisplayName() {
-        return MY_OWN_GROUP;
+        return PLUGIN_GROUP;
     }
 
     @Override
