@@ -13,4 +13,6 @@ What this plugin does is to extend the existing inspections from IntelliJ IDEA a
 
 • Data structures that perform badly for parallel streams
 
-• Sort then filter/distinct methods chain•Sort then limit methods chain
+• Sort then filter/distinct methods chain
+
+• Sort then limit methods chain
