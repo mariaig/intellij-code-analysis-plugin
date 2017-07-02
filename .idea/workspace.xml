@@ -4,60 +4,9 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8db08ef-b784-4a26-a5e9-98a4089a3587" name="Default" comment="add inspections descriptions">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NOTICE" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ParallelStreamBenchmarks.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/maria.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/actions/GenerateDependencyTree$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/actions/GenerateDependencyTree$MyProcessor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/actions/GenerateDependencyTree.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/impl/CheckConstructorRule.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/impl/DependencyTree.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/impl/TestAction$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/impl/TestAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/thesis/plugin/actions/GenerateDependencyTree.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/thesis/plugin/impl/CheckConstructorRule.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/thesis/plugin/impl/DependencyTree.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/thesis/plugin/impl/TestAction.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/impl/Constants.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/impl/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/impl/InvertedNodesExpressionGraph.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/impl/InvertedNodesExpressionGraph.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ConcurrentModificationInspection$1.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ConcurrentModificationInspection$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ConcurrentModificationInspection$2.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ConcurrentModificationInspection$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ConcurrentModificationInspection.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ConcurrentModificationInspection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ParallelStreamInspection$1.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ParallelStreamInspection$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ParallelStreamInspection$InspectionProcessor.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ParallelStreamInspection$InspectionProcessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ParallelStreamInspection$ParallelStreamQuickFix.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ParallelStreamInspection$ParallelStreamQuickFix.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ParallelStreamInspection$SynchronizedQuickFix.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ParallelStreamInspection$SynchronizedQuickFix.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ParallelStreamInspection.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ParallelStreamInspection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ParallelStreamVarTypesInspection$1.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ParallelStreamVarTypesInspection$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ParallelStreamVarTypesInspection$2.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ParallelStreamVarTypesInspection$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ParallelStreamVarTypesInspection$ParallelStreamFix.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ParallelStreamVarTypesInspection$ParallelStreamFix.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ParallelStreamVarTypesInspection.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/ParallelStreamVarTypesInspection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/SortedThenFilterInspection$1.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/SortedThenFilterInspection$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/SortedThenFilterInspection$QuickFix.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/SortedThenFilterInspection$QuickFix.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/SortedThenFilterInspection.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/SortedThenFilterInspection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/SortedThenLimitInspection$1.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/SortedThenLimitInspection$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/SortedThenLimitInspection.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/SortedThenLimitInspection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/StaticNonFinalClassVariablesInspection$1.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/StaticNonFinalClassVariablesInspection$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/StaticNonFinalClassVariablesInspection$QuickFix.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/StaticNonFinalClassVariablesInspection$QuickFix.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/StaticNonFinalClassVariablesInspection.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/StaticNonFinalClassVariablesInspection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/UtilityClassesInspection$1.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/UtilityClassesInspection$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/UtilityClassesInspection$GenerateConstructor.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/UtilityClassesInspection$GenerateConstructor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/UtilityClassesInspection$MakeConstructorPrivate.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/UtilityClassesInspection$MakeConstructorPrivate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/UtilityClassesInspection.class" afterPath="$PROJECT_DIR$/out/production/thesis-plugin/thesis/plugin/inspection/UtilityClassesInspection.class" />
+    <list default="true" id="c8db08ef-b784-4a26-a5e9-98a4089a3587" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/impl/Constants.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/impl/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/impl/InvertedNodesExpressionGraph.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/impl/InvertedNodesExpressionGraph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/AbstractRedundantChainInspection.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/AbstractRedundantChainInspection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/ConcurrentModificationInspection.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/ConcurrentModificationInspection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/ParallelStreamInspection.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/ParallelStreamInspection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/ParallelStreamVarTypesInspection.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/ParallelStreamVarTypesInspection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/SortedThenDistinctInspection.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/SortedThenDistinctInspection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/SortedThenFilterInspection.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/SortedThenFilterInspection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/SortedThenLimitInspection.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/SortedThenLimitInspection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/StaticNonFinalClassVariablesInspection.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/StaticNonFinalClassVariablesInspection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thesis/plugin/inspection/UtilityClassesInspection.java" afterPath="$PROJECT_DIR$/src/thesis/plugin/inspection/UtilityClassesInspection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,7 +19,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SortedThenFilterInspection.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SortedThenFilterInspection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/thesis/plugin/inspection/SortedThenFilterInspection.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="91">
@@ -130,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LICENSE" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LICENSE" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LICENSE">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="892">
-              <caret line="181" column="30" lean-forward="false" selection-start-line="181" selection-start-column="30" selection-end-line="181" selection-end-column="30" />
+            <state relative-caret-position="263">
+              <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -284,10 +233,10 @@
         <option value="$PROJECT_DIR$/resources/inspectionDescriptions/UtilityClassesInspection.html" />
         <option value="$PROJECT_DIR$/src/thesis/plugin/inspection/ParallelStreamVarTypesInspection.java" />
         <option value="$PROJECT_DIR$/src/thesis/plugin/inspection/ConcurrentModificationInspection.java" />
-        <option value="$PROJECT_DIR$/LICENSE" />
         <option value="$PROJECT_DIR$/src/thesis/plugin/impl/Constants.java" />
         <option value="$PROJECT_DIR$/NOTICE" />
         <option value="$PROJECT_DIR$/src/thesis/plugin/impl/InvertedNodesExpressionGraph.java" />
+        <option value="$PROJECT_DIR$/LICENSE" />
       </list>
     </option>
   </component>
@@ -750,7 +699,14 @@
       <option name="project" value="LOCAL" />
       <updated>1498922838490</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="some cleanup &amp; refactoring &amp; apache 2.0 licence">
+      <created>1498991139310</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1498991139310</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -831,7 +787,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added missing files" />
     <MESSAGE value="add inspections descriptions" />
-    <option name="LAST_COMMIT_MESSAGE" value="add inspections descriptions" />
+    <MESSAGE value="some cleanup &amp; refactoring &amp; apache 2.0 licence" />
+    <option name="LAST_COMMIT_MESSAGE" value="some cleanup &amp; refactoring &amp; apache 2.0 licence" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1385,14 +1342,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="892">
-          <caret line="181" column="30" lean-forward="false" selection-start-line="181" selection-start-column="30" selection-end-line="181" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/thesis/plugin/actions/GenerateDependencyTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1071">
@@ -1453,6 +1402,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="91">
           <caret line="90" column="68" lean-forward="true" selection-start-line="90" selection-start-column="68" selection-end-line="90" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
           <folding />
         </state>
       </provider>
